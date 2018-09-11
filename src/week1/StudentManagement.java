@@ -3,9 +3,10 @@ package week1;
 public class StudentManagement {
 
 	// TODO: khai báo thuộc tính students là array chứa các đối tượng thuộc lớp
+	public Student [] students; 
 	// Student (max. 100)
 
-	public boolean sameGroup(Student s1, Student s2) {
+	public static boolean sameGroup(Student s1, Student s2) {
 		// TODO:
 		return s1.getGroup() == s2.getGroup();
 	}
@@ -37,5 +38,14 @@ public class StudentManagement {
 		Student tester = new Student("Phat", "11122223333", "111222333@vnu.edu.vn");
 		Student nguyenCopy = new Student(nguyen);
 		phat.getInfo();
+
+		Student thayHoang = new Student();
+		Student thayHung = new Student();
+		Student thayQuang = new Student();
+		thayQuang.setGroup("INT22042");
+
+		System.out.println(sameGroup(thayHung, thayHoang));
+		System.out.println(sameGroup(thayQuang, thayHoang));
+
 	}
 }
