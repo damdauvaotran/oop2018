@@ -19,5 +19,17 @@ public class StudentManagement {
 
     public static void main(String[] args) {
         // TODO:
+    	Student goodStudent = new Student();
+    	Student badStudent = new Student();
+    	
+    	Student nguyen = new Student();
+    	nguyen.setName("Nguyen");
+    	nguyen.setGroup("K62-IE4");
+    	nguyen.setId("17020936");
+    	nguyen.setEmail("ngokhoaisan1999@gmail.com");
+    	
+    	System.out.println(nguyen.getName());
+    	
+    	nguyen.getInfo();
     }
 }
