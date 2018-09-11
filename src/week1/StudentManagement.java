@@ -3,7 +3,7 @@ package week1;
 public class StudentManagement {
 
 	// TODO: khai báo thuộc tính students là array chứa các đối tượng thuộc lớp
-	public Student [] students; 
+	public Student[] students = new Student[100];
 	// Student (max. 100)
 
 	public static boolean sameGroup(Student s1, Student s2) {
@@ -17,6 +17,15 @@ public class StudentManagement {
 
 	void removeStudent(String id) {
 		// TODO:
+		for (int i = 0; i < this.students.length; i++) {
+			if (this.students[i].getId() == id) {
+				for (int j = i; j < this.students.length; j++) {
+					this.students[j] = this.students[j + 1];
+				}
+				this.students[this.students.length] = null;
+			}
+
+		}
 	}
 
 	public static void main(String[] args) {
@@ -32,12 +41,12 @@ public class StudentManagement {
 
 		System.out.println(nguyen.getName());
 
-		nguyen.getInfo();
+		System.out.println(nguyen.getInfo());
 
 		Student phat = new Student();
 		Student tester = new Student("Phat", "11122223333", "111222333@vnu.edu.vn");
 		Student nguyenCopy = new Student(nguyen);
-		phat.getInfo();
+		System.out.println(phat.getInfo());
 
 		Student thayHoang = new Student();
 		Student thayHung = new Student();

@@ -82,10 +82,6 @@ public class Student {
 
 	String getInfo() {
 		// TODO:
-		System.out.println("Ten: " + this.name);
-		System.out.println("MSSV: " + this.id);
-		System.out.println("Lop: " + this.group);
-		System.out.println("Email: " + this.email);
-		return null; // xóa dòng này sau khi cài đặt
+		return "Ten: " + this.name + "\nMSSV: " + this.id + "\nLop: " + this.group + "\nEmail: " + this.email;
 	}
 }
