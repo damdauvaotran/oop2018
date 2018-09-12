@@ -1,9 +1,12 @@
 package week1;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class StudentManagement {
 
 	// TODO: khai báo thuộc tính students là array chứa các đối tượng thuộc lớp
-	public Student[] students = new Student[100];
+    ArrayList<Student>  students = new ArrayList<Student>();
 	// Student (max. 100)
 
 	public static boolean sameGroup(Student s1, Student s2) {
@@ -13,16 +16,16 @@ public class StudentManagement {
 
 	void studentsByGroup() {
 		// TODO:
+
+
 	}
 
 	void removeStudent(String id) {
 		// TODO:
-		for (int i = 0; i < this.students.length; i++) {
-			if (this.students[i].getId() == id) {
-				for (int j = i; j < this.students.length; j++) {
-					this.students[j] = this.students[j + 1];
-				}
-				this.students[this.students.length] = null;
+		for (int i = 0; i < this.students.size(); i++) {
+			if (this.students.get(i).getId() == id) {
+				this.students.remove(i);
+                i--;
 			}
 
 		}
@@ -39,22 +42,32 @@ public class StudentManagement {
 		nguyen.setId("17020936");
 		nguyen.setEmail("ngokhoaisan1999@gmail.com");
 
-		System.out.println(nguyen.getName());
-
-		System.out.println(nguyen.getInfo());
+//		nguyen.getName();
+//
+//      nguyen.getInfo();
 
 		Student phat = new Student();
 		Student tester = new Student("Phat", "11122223333", "111222333@vnu.edu.vn");
 		Student nguyenCopy = new Student(nguyen);
-		System.out.println(phat.getInfo());
+//		phat.getInfo();
 
 		Student thayHoang = new Student();
 		Student thayHung = new Student();
 		Student thayQuang = new Student();
 		thayQuang.setGroup("INT22042");
+//
+//		System.out.println(sameGroup(thayHung, thayHoang));
+//		System.out.println(sameGroup(thayQuang, thayHoang));
 
-		System.out.println(sameGroup(thayHung, thayHoang));
-		System.out.println(sameGroup(thayQuang, thayHoang));
 
+        StudentManagement studentManagement = new StudentManagement();
+        studentManagement.students.add(thayHoang);
+        studentManagement.students.add(thayHung);
+        studentManagement.students.add(thayQuang);
+        studentManagement.students.add(tester);
+        studentManagement.removeStudent("000");
+        for (Student student : studentManagement.students){
+            student.getInfo();
+        }
 	}
 }
