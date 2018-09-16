@@ -43,7 +43,7 @@ public class StudentManagement {
 					this.students[j] = this.students[j + 1];
 				}
 				this.students[this.students.length - 1] = null;
-
+				i--;
 			}
 
 		}
@@ -77,7 +77,7 @@ public class StudentManagement {
 //		System.out.println(sameGroup(thayQuang, thayHoang));
 
 		StudentManagement studentManagement = new StudentManagement();
-		studentManagement.students = new Student[] { thayHoang, thayHung, thayQuang, null };
+		studentManagement.students = new Student[] { thayHoang, thayHoang , thayHoang, thayHung, thayQuang, null };
 		studentManagement.removeStudent("000");
 		for (Student s : studentManagement.students) {
 			if (s != null) {
