@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class StudentManagement {
 
 	// TODO: khai báo thuộc tính students là array chứa các đối tượng thuộc lớp
-	public Student[] students = new Student[100];
+	Student[] students = new Student[100];
 	// Student (max. 100)
 
 	public static boolean sameGroup(Student s1, Student s2) {
@@ -15,6 +15,7 @@ public class StudentManagement {
 
 	void studentsByGroup() {
 		// TODO:
+
 		ArrayList<String> group = new ArrayList<String>();
 		for (int i = 0; i < this.students.length; i++) {
 			if (group.indexOf(this.students[i].getGroup()) < 0) {
@@ -35,13 +36,14 @@ public class StudentManagement {
 
 	void removeStudent(String id) {
 		// TODO:
+
 		for (int i = 0; i < this.students.length; i++) {
-			if (this.students[i]!= null &&  this.students[i].getId() == id) {
-				for (int j = i; j < this.students.length-1; j++) {
+			if (this.students[i] != null && this.students[i].getId() == id) {
+				for (int j = i; j < this.students.length - 1; j++) {
 					this.students[j] = this.students[j + 1];
 				}
-				this.students[this.students.length-1] = null;
-				i--;
+				this.students[this.students.length - 1] = null;
+
 			}
 
 		}
@@ -67,7 +69,9 @@ public class StudentManagement {
 		Student thayHung = new Student();
 		Student thayQuang = new Student();
 		thayQuang.setGroup("INT22042");
+
 		thayQuang.setId("INT22042");
+
 //
 //		System.out.println(sameGroup(thayHung, thayHoang));
 //		System.out.println(sameGroup(thayQuang, thayHoang));
