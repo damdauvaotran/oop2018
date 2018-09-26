@@ -64,8 +64,10 @@ public class Fraction {
     }
 
     public static void main (String [] args){
-        Fraction a = new Fraction(1,2);
-        Fraction b= new Fraction(2,4);
-        System.out.println(a.equals(b));
+        Fraction fraction1 = new Fraction(2, 3);
+        Fraction fraction2 = new Fraction(2, 3);
+        Fraction fraction3 = new Fraction(4, 6);
+        System.out.println(fraction1.equals(fraction2));
+        System.out.println(fraction1.equals(fraction3));
     }
 }

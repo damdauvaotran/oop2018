@@ -17,4 +17,5 @@ public class Task1 {
         }
         return fibonacci(n - 1) + fibonacci(n - 2);
     }
+
 }
