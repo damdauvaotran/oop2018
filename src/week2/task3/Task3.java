@@ -57,3 +57,99 @@ class Computer {
     }
 }
 
+class Human {
+    private int age;
+    private String name;
+    private double weight;
+
+    public Human(int age, String name, double weight) {
+        this.age = age;
+        this.name = name;
+        this.weight = weight;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+    //Giam can
+    public void lowerWeight(double lower){
+        this.weight -= lower;
+    }
+
+    //Giam can
+    public void increaseWeight(double increase){
+        this.weight += increase;
+    }
+    //Gia di
+    public void older(int year){
+        this.age = this.age+ year;
+    }
+}
+
+class space {
+    private int numberOfDimemtion ;
+    private int unit ;
+    private double angle;
+
+    public int getNumberOfDimemtion() {
+        return numberOfDimemtion;
+    }
+
+    public void setNumberOfDimemtion(int numberOfDimemtion) {
+        this.numberOfDimemtion = numberOfDimemtion;
+    }
+
+    public int getUnit() {
+        return unit;
+    }
+
+    public void setUnit(int unit) {
+        this.unit = unit;
+    }
+
+    public double getAngle() {
+        return angle;
+    }
+
+    public void setAngle(double angle) {
+        this.angle = angle;
+    }
+
+    //Tang so chieu cua khong gian ;
+    public void increaseDimention(int i){
+        this.numberOfDimemtion+=i;
+    }
+
+    //Tinh tien vector don vi
+    public void changeUnit (int i){
+        this.unit +=i;
+    }
+
+    //Tinh don vi dien tich
+    public double changeAngle (){
+        return this.unit*this.unit*Math.cos(this.angle);
+    }
+}
+
+
+

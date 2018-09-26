@@ -62,12 +62,4 @@ public class Fraction {
         return this.subtract(fraction).numerator==0;
 
     }
-
-    public static void main (String [] args){
-        Fraction fraction1 = new Fraction(2, 3);
-        Fraction fraction2 = new Fraction(2, 3);
-        Fraction fraction3 = new Fraction(4, 6);
-        System.out.println(fraction1.equals(fraction2));
-        System.out.println(fraction1.equals(fraction3));
-    }
 }
