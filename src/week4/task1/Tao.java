@@ -1,13 +1,13 @@
 package week4.task1;
 
 /**
- * This class represent the fruit
- *
+ * This class represent the apple
  * @author xxNguyenxx
  */
 public class Tao extends HoaQua {
 
     /**
+     * Make new Apple object
      * @param price
      * @param size
      */
@@ -16,7 +16,7 @@ public class Tao extends HoaQua {
     }
 
     /**
-     * @param t
+     * @param t An Apple object
      */
     public Tao(Tao t) {
         this(t.price, t.size);

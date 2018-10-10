@@ -26,7 +26,6 @@ public class HoaQua {
 
     /**
      * make new copy of an fruit
-     *
      * @param h the fruit object
      */
     public HoaQua(HoaQua h) {

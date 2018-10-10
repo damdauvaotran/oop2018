@@ -1,8 +1,7 @@
 package week4.task1;
 
 /**
- * This class represent the fruit
- *
+ * This class represent the orange
  * @author xxNguyenxx
  */
 public class Cam extends HoaQua {
