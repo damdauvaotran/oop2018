@@ -32,8 +32,5 @@ public class Shape {
         this.filled = filled;
     }
 
-    @Override
-    public String toString() {
-        return "color: "+ this.color+ " is filled"+ this.filled;
-    }
+
 }
